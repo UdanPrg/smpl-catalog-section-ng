@@ -46,6 +46,7 @@ export class AppComponent {
       image: './assets/images/glasses.jpg'
     }
   ];
+  showImage = true;
 
   imageParent = '';
   widthImg = 10;
@@ -131,5 +132,8 @@ export class AppComponent {
 
   onLoaded(img: string){
     console.log('log padre', img)
+  }
+  toogleImg(){
+    this.showImage = !this.showImage;
   }
 }

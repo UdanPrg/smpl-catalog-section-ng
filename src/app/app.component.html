@@ -1,11 +1,13 @@
 <h1>Components</h1>
 <input type="text" [(ngModel)]="imageParent">
-<app-img (loaded)="onLoaded($event)" [img]="imageParent"></app-img>
+<button (click)="toogleImg()">Toogle Image</button>
+<p>{{showImage}}</p>
+<app-img *ngIf="showImage" (loaded)="onLoaded($event)" [img]="imageParent"></app-img>
 <hr>
 <div class="styles">
   <app-product [product]="product" *ngFor="let product of products"></app-product>
-
 </div>
+
 
 <hr>
 <h1>Formulario</h1>
