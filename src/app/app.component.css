@@ -4,3 +4,46 @@
   overflow: scroll;
   background-color: chocolate;
 }
+.products--grid{
+  display: flex;
+  flex-direction: column;
+}
+.products--grid div img{
+  width: 100%;
+  border-radius: 10px;
+}
+.products--grid div h2,
+.products--grid div p{
+  margin: 0;
+}
+.message-error{
+  background-color: red;
+  color: white;
+  opacity: 0;
+  transition: all linear 0.5s;
+}
+.message-error.invalid{
+  opacity: 1;
+  transition: all linear 0.5s;
+}
+.styles{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.line-error{
+  height: 0;
+  border-bottom: 1px solid;
+}
+.line-error.valid{
+  border-color: green;
+}
+.line-error.invalid{
+  border-color: red;
+}
+@media screen and (min-width: 40em) {
+  .products--grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+  }
+}
