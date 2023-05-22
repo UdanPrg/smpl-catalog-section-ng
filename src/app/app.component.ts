@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Product } from './product.model';
+import { ProductExample } from './product.model';
+import { Product } from './models/product.model';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,45 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  products: Product[] = [
+    {
+      id: '1',
+      name: 'EL mejor juguete',
+      price: 565,
+      image: './assets/images/toy.jpg'
+    },
+    {
+      id: '2',
+      name: 'Bicicleta casi nueva',
+      price: 356,
+      image: './assets/images/bike.jpg'
+    },
+    {
+      id: '3',
+      name: 'Colleción de albumnes',
+      price: 34,
+      image: './assets/images/album.jpg'
+    },
+    {
+      id: '4',
+      name: 'Mis libros',
+      price: 23,
+      image: './assets/images/books.jpg'
+    },
+    {
+      id: '5',
+      name: 'Casa para perro',
+      price: 34,
+      image: './assets/images/house.jpg'
+    },
+    {
+      id: '6',
+      name: 'Gafas',
+      price: 33,
+      image: './assets/images/glasses.jpg'
+    }
+  ];
+
   imageParent = '';
   widthImg = 10;
   name = 'Uriel';
@@ -30,7 +70,7 @@ export class AppComponent {
     height: 100,
     background: '#F00'
   };
-  products: Product[] = [
+  productsExample: ProductExample[] = [
     {
       name: 'EL mejor juguete',
       price: 565,

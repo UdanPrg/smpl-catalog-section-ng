@@ -1,7 +1,11 @@
 <h1>Components</h1>
 <input type="text" [(ngModel)]="imageParent">
 <app-img (loaded)="onLoaded($event)" [img]="imageParent"></app-img>
+<hr>
+<div class="styles">
+  <app-product [product]="product" *ngFor="let product of products"></app-product>
 
+</div>
 
 <hr>
 <h1>Formulario</h1>
@@ -111,7 +115,7 @@
 <hr>
 <h1>*ngFor Objs</h1>
 <div class="products--grid">
-  <div *ngFor="let product of products">
+  <div *ngFor="let product of productsExample">
     <img [src]="product.image" alt="image">
     <p>{{ product.name }}</p>
     <h2>USD$ {{ product.price}}</h2>
