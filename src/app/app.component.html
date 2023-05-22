@@ -1,5 +1,6 @@
 <h1>Components</h1>
-<app-img></app-img>
+<input type="text" [(ngModel)]="imageParent">
+<app-img (loaded)="onLoaded($event)" [img]="imageParent"></app-img>
 
 
 <hr>
