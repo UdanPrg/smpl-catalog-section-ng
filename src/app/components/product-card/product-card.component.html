@@ -1,7 +1,5 @@
 <div>
-  <!-- <InputTitle currentTitle={textTitle} funChangeTitle={head => setTextTitle(head.target.value)} /> -->
-
-  <!-- <div class="transition duration-500 ease-in-out hover:shadow-xl" [key]="id"> -->
+  <app-text-title (changeTitle)="onChangeTitle($event)" [currentTitle]="product.title"></app-text-title>
   <div class="border-2 border-gray-700 px-3 py-6 transition duration-500 ease-in-out hover:shadow-xl">
       <img [src]="product.image" class="mx-auto w-2/3 h-80 object-contain border-2 border-slate-100 p-3" alt="">
 

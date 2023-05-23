@@ -19,7 +19,7 @@ export class RangeSizeComponent {
     this.size = this.storeService.getsize();
   }
 
-  onChangeSizeTitle(event: Event){
+  changeSizeTitle(event: Event){
     this.storeService.onchangeSizeTitle(event)
   }
 

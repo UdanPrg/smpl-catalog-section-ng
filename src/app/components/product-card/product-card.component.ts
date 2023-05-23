@@ -18,6 +18,7 @@ export class ProductCardComponent implements OnInit {
     description: '',
     image: ''
   };
+  // key: number = 0;
 
   size: number = 20;
   countProducts = 0;
@@ -35,5 +36,8 @@ export class ProductCardComponent implements OnInit {
   changeSizeTitle(){
     // const element = event.target as HTMLInputElement;
     this.size = this.storeService.getsize();
+  }
+  onChangeTitle(title: string){
+    this.product.title = title
   }
 }
