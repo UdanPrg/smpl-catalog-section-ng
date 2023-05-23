@@ -9,10 +9,10 @@
       <fa-icon
       [icon]="faCog"
       (click)="onChangeCog()"
-      class="text-center absolute stroke-2 transition-all duration-500 rounded-full w-12 h-12 p-3 border border-slate-800 cursor-pointer"
+      class="text-center top-2 absolute stroke-2 transition-all duration-500 rounded-full w-12 h-12 p-3 border border-slate-800 cursor-pointer"
       [ngClass]="{
-        'top-2 right-full mr-2 bg-gray-50 stroke-gray-800': cogActive == false,
-        'top-2 right-2 mr-0 bg-gray-800 stroke-gray-50': cogActive == true
+        'right-full mr-2 bg-gray-50 stroke-gray-800': cogActive == false,
+        'right-2 mr-0 bg-gray-800 stroke-gray-50 text-white': cogActive == true
       }"
       ></fa-icon>
 
