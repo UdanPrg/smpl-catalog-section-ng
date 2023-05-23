@@ -6,8 +6,17 @@
       <img [src]="product.image" class="mx-auto w-2/3 h-80 object-contain border-2 border-slate-100 p-3" alt="">
 
       <!-- <h4 style={{ fontSize: `${sizeTitle}px` }} class="line-clamp-1 font-semibold my-4 h-16 flex items-stretch">{textTitle}</h4> -->
+      <!-- <input type="range"
+          [(ngModel)]="sizeTitle"
+          min="10"
+          max="50"
+          step="2"
+          for="sizeRange"
+          (change)="changeSizeTitle($event)"
+          class="my-2"
+        /> -->
       <h4
-        [style.font-size.px]="sizeTitle"
+        [style.font-size.px]="size"
         class="line-clamp-1 font-semibold my-4 h-16 flex items-stretch">
         {{product.title}}
       </h4>

@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { StoreService } from 'src/app/services/store.service';
 
 @Component({
@@ -7,24 +7,23 @@ import { StoreService } from 'src/app/services/store.service';
   templateUrl: './range-size.component.html',
   styleUrls: ['./range-size.component.css']
 })
-export class RangeSizeComponent implements OnChanges {
-  faCoffee = faCoffee;
+export class RangeSizeComponent {
+  faCog = faCog;
   label = 'Size is:';
-  size = this.storeService.size;
+  size : number = 24;
+  cogActive = false;
 
-  @Output() sendCurrentSize = new EventEmitter<number>();
   constructor(
     private storeService: StoreService
   ){
+    this.size = this.storeService.getsize();
+  }
 
+  onChangeSizeTitle(event: Event){
+    this.storeService.onchangeSizeTitle(event)
   }
-  ngOnChanges(changes: SimpleChanges){
-    // console.log('ngOnChanges', 'size => ', this.size );
-    console.log(changes);
-  }
-  changeSizeTitle(event: Event){
-    const element = event.target as HTMLInputElement;
-    this.storeService.size = parseInt(element.value);
-    console.log(this.storeService.size)
+
+  onChangeCog(){
+    this.cogActive = !this.cogActive;
   }
 }

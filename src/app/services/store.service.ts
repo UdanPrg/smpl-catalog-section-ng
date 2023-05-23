@@ -1,32 +1,36 @@
-import { Injectable, Output, EventEmitter, SimpleChanges, OnChanges } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StoreService implements OnChanges {
+export class StoreService {
 
-  size:number = 24;
 
-  private range = new BehaviorSubject<number>(this.size);
-  range$ = this.range.asObservable();
-
-  changeRange(){
-    this.range.next(this.size)
-  }
+  // changeRangeSize(){
+  //   this.rangeSize.next(this.size)
+  // }
 
   // @Output() sendCurrentSize = new EventEmitter<number>();
 
-  ngOnChanges(changes: SimpleChanges){
-    console.log('ngOnChanges', 'size => ', this.size );
-    console.log(changes);
-    this.range.next(this.size)
-  }
-  // changeSizeTitle(event: Event){
-  //   const element = event.target as HTMLInputElement;
-  //   this.size = parseInt(element.value);
-  //   this.sendCurrentSize.emit(this.size);
+  // ngOnChanges(changes: SimpleChanges){
+  //   console.log('ngOnChanges', 'size => ', this.size );
+  //   console.log(changes);
+  //   this.rangeSize.next(this.size)
   // }
 
+  getsize(){
+    return this.size;
+  }
+  private size: number = 24;
+  private rangeSize = new BehaviorSubject<number>(this.size);
+
+  rangeSize$ = this.rangeSize.asObservable();
+
+  onchangeSizeTitle(event: Event){
+    const element = event.target as HTMLInputElement;
+    this.size = parseInt(element.value);
+    this.rangeSize.next(this.size);
+  }
   constructor() { }
 }

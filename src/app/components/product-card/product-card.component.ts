@@ -19,7 +19,7 @@ export class ProductCardComponent implements OnInit {
     image: ''
   };
 
-  sizeTitle: number = 20;
+  size: number = 20;
   countProducts = 0;
 
   constructor(
@@ -28,9 +28,12 @@ export class ProductCardComponent implements OnInit {
 
   }
   ngOnInit(){
-    this.storeService.range$.subscribe(size =>{
-      this.sizeTitle = size;
+    this.storeService.rangeSize$.subscribe(size=>{
+      this.size = size;
     })
   }
-
+  changeSizeTitle(){
+    // const element = event.target as HTMLInputElement;
+    this.size = this.storeService.getsize();
+  }
 }
