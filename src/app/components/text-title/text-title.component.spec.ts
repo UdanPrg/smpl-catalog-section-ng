@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImgComponent } from './img.component';
+import { TextTitleComponent } from './text-title.component';
 
-describe('ImgComponent', () => {
-  let component: ImgComponent;
-  let fixture: ComponentFixture<ImgComponent>;
+describe('TextTitleComponent', () => {
+  let component: TextTitleComponent;
+  let fixture: ComponentFixture<TextTitleComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ImgComponent]
+      declarations: [TextTitleComponent]
     });
-    fixture = TestBed.createComponent(ImgComponent);
+    fixture = TestBed.createComponent(TextTitleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

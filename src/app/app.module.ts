@@ -4,14 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ImgComponent } from './components/img/img.component';
 import { ProductComponent } from './components/product/product.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { RangeSizeComponent } from './components/range-size/range-size.component';
+import { TextTitleComponent } from './components/text-title/text-title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImgComponent,
-    ProductComponent
+    ProductComponent,
+    CartComponent,
+    ProductCardComponent,
+    RangeSizeComponent,
+    TextTitleComponent
   ],
   imports: [
     BrowserModule,
