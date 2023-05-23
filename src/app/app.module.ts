@@ -9,6 +9,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { RangeSizeComponent } from './components/range-size/range-size.component';
 import { TextTitleComponent } from './components/text-title/text-title.component';
+import { ProductSectionComponent } from './components/product-section/product-section.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { TextTitleComponent } from './components/text-title/text-title.component
     CartComponent,
     ProductCardComponent,
     RangeSizeComponent,
-    TextTitleComponent
+    TextTitleComponent,
+    ProductSectionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

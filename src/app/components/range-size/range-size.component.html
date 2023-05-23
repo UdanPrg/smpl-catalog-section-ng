@@ -1,1 +1,53 @@
-<p>range-size works!</p>
+<!-- <div class={`fixed h-40 w-3/4 md:w-1/3  transition-all duration-500 ${active ? '-right-3/4 md:-right-1/3' : 'right-0'} -top-px bg-gray-100 border border-gray-300`}> -->
+<div class="fixed h-40 w-3/4 md:w-1/3  transition-all duration-500 -top-px bg-gray-100 border border-gray-300">
+  <div class="relative w-full h-full ">
+      <!-- <Cog6ToothIcon
+          onClick={() => setActive(!active)}
+          class={`absolute ${active ? ' top-2 right-full mr-2 bg-gray-50 stroke-gray-800' : 'top-2 right-2 mr-0 bg-gray-800 stroke-gray-50'} stroke-2 transition-all duration-500 rounded-full w-12 h-12 p-3 border border-slate-800 cursor-pointer`}
+      /> -->
+
+      <!-- ${active ? ' top-2 right-full mr-2 bg-gray-50 stroke-gray-800' : 'top-2 right-2 mr-0 bg-gray-800 stroke-gray-50'} -->
+      <fa-icon
+      [icon]="faCoffee"
+      class="absolute stroke-2 transition-all duration-500 rounded-full w-12 h-12 p-3 border border-slate-800 cursor-pointer"
+      ></fa-icon>
+
+      <div class="w-full h-full p-4 lg:pr-24 lg:pl-10 flex flex-col justify-center">
+          <label htmlFor="sizeRange" class="font-bold text-sm"> Size of product titles </label>
+          <!-- <input
+              type="range"
+              value={currentSize}
+              min={10}
+              max={50}
+              step={2}
+              onChange={funChangeSize}
+              htmlFor="sizeRange"
+              class="my-2"
+          /> -->
+          <!-- <input type="range"
+            [(ngModel)]="size"
+            min="10"
+            max="50"
+            step="2"
+            for="sizeRange"
+            (change)="changeSizeTitle($event)"
+            class="my-2"
+          /> -->
+          <input type="range"
+            [(ngModel)]="size"
+            min="10"
+            max="50"
+            step="2"
+            for="sizeRange"
+            (change)="changeSizeTitle($event)"
+            class="my-2"
+          />
+          <!-- <h4
+            [style.font-size.px]="size"
+            class="line-clamp-1 font-semibold my-4 h-16 flex items-stretch">
+            hola
+          </h4> -->
+          <span class="text-sm text-gray-500">{{label}} <b> {{size}} px</b></span>
+      </div>
+  </div>
+</div>

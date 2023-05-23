@@ -8,10 +8,12 @@ import { Product } from 'src/app/models/product.model';
 })
 export class ProductComponent {
   @Input() product: Product = {
-    id: '',
-    name: '',
-    image: '',
-    price: 0
+    id: 0,
+    title:'',
+    price: '',
+    category: '',
+    description: '',
+    image: ''
   }
 
 }
