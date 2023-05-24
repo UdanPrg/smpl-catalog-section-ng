@@ -1,23 +1,12 @@
 <main class="flex min-h-screen flex-col items-center justify-between py-12 p-5 md:p-16 xl:p-24">
   <h1 class="text-center text-4xl font-bold mt-10 sm:mt-0 mb-10"> Shopping Section</h1>
+
   <section class='grid grid-cols-1 md:grid-cols-3 gap-4 py-5 w-full'>
-    <!-- <Range currentSize={textSize} funChangeSize={reSize => setTextSize(reSize.target.value)} label={"Size is:"}/> -->
+    <app-range-size></app-range-size>
   </section>
+
   <app-product-section></app-product-section>
 
-  <app-range-size></app-range-size>
+  <app-cart></app-cart>
 
-  <!-- <CartContext.Provider value={[cart, setCart]}>
-    <SectionProducts
-      child={
-        products.map((product) =>(
-          <Product id={product.id} title={product.title} description={product.description} price={product.price} image={product.image} sizeTitle={textSize} key={product.id}/>
-          ))
-        }
-    />
-    </CartContext.Provider> -->
-
-    <!-- <CartContext.Provider value={[cart, setCart]}>
-      <Cart />
-    </CartContext.Provider> -->
 </main>

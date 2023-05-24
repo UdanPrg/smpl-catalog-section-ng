@@ -7,7 +7,7 @@ import { ProductsService } from 'src/app/services/products.service';
   templateUrl: './product-section.component.html',
   styleUrls: ['./product-section.component.css']
 })
-export class ProductSectionComponent {
+export class ProductSectionComponent implements OnInit {
   products: Product[] = [];
 
   constructor(

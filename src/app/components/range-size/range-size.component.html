@@ -1,7 +1,7 @@
 <div
 [ngClass]="{
-  '-right-3/4 md:-right-1/3': cogActive == false,
-  'right-0': cogActive == true
+  '-right-3/4 md:-right-1/3': cogActive === false,
+  'right-0': cogActive === true
 }"
   class="fixed h-40 w-3/4 md:w-1/3 transition-all duration-500 -top-px bg-gray-100 border border-gray-300"
 >
@@ -11,8 +11,8 @@
       (click)="onChangeCog()"
       class="text-center top-2 absolute stroke-2 transition-all duration-500 rounded-full w-12 h-12 p-3 border border-slate-800 cursor-pointer"
       [ngClass]="{
-        'right-full mr-2 bg-gray-50 stroke-gray-800': cogActive == false,
-        'right-2 mr-0 bg-gray-800 stroke-gray-50 text-white': cogActive == true
+        'right-full mr-2 bg-gray-50 stroke-gray-800': cogActive === false,
+        'right-2 mr-0 bg-gray-800 stroke-gray-50 text-white': cogActive === true
       }"
       ></fa-icon>
 

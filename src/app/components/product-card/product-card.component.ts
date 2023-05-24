@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { StoreService } from 'src/app/services/store.service';
 
 @Component({
@@ -16,11 +15,12 @@ export class ProductCardComponent implements OnInit {
     price: '',
     category: '',
     description: '',
-    image: ''
+    image: '',
+    quantity: 0
   };
   // key: number = 0;
 
-  size: number = 20;
+  currentSize = 20;
   countProducts = 0;
 
   constructor(
@@ -29,15 +29,16 @@ export class ProductCardComponent implements OnInit {
 
   }
   ngOnInit(){
-    this.storeService.rangeSize$.subscribe(size=>{
-      this.size = size;
+    this.storeService.rangeSize$.subscribe(size => {
+      this.currentSize = size;
     })
-  }
-  changeSizeTitle(){
-    // const element = event.target as HTMLInputElement;
-    this.size = this.storeService.getsize();
   }
   onChangeTitle(title: string){
     this.product.title = title
+  }
+  onAddToCart(product: Product){
+    // console.log(this.countProducts)
+    this.storeService.addProductsToCart(product);
+    console.log(product);
   }
 }

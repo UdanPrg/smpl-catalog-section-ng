@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { StoreService } from 'src/app/services/store.service';
 
@@ -10,7 +10,7 @@ import { StoreService } from 'src/app/services/store.service';
 export class RangeSizeComponent {
   faCog = faCog;
   label = 'Size is:';
-  size : number = 24;
+  size = 24;
   cogActive = false;
 
   constructor(

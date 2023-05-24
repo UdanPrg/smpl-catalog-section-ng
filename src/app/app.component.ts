@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductExample } from './product.model';
 
 @Component({
@@ -27,7 +27,6 @@ export class AppComponent {
     password: ''
   };
   names: string[] = ['Uriel', 'David', 'Santiago'];
-  newName:string = '';
   box = {
     width: 100,
     height: 100,
@@ -80,10 +79,6 @@ export class AppComponent {
   changeName(event: Event){
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
-  }
-  addName(){
-    this.names.push(this.newName);
-    this.newName = '';
   }
   deleteName(index:number){
     this.names.splice(index, 1)

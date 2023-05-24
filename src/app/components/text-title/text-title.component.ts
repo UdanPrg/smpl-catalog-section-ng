@@ -6,10 +6,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./text-title.component.css']
 })
 export class TextTitleComponent {
-  @Input() currentTitle: string = '';
+  @Input() currentTitle = '';
   @Output() changeTitle = new EventEmitter<string>()
-
-  constructor( ){  }
 
   funChangeTitle(event: Event){
     const e = event.target as HTMLInputElement;
